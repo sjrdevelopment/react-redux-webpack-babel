@@ -1,0 +1,61 @@
+@import './colors';
+@import './fonts';
+
+/// Hide visually but still be available to screenreaders
+/// @group Main
+/// @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+/// @author Jonathan Snook
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin backArrow {
+  padding-left: 14px;
+  position: relative;
+
+  &:before {
+    content: '< ';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    display: block;
+  }
+}
+
+/// Undo visually hidden styles
+/// @group Main
+@mixin undo-visually-hidden {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin actionButton {
+  border: 0;
+  border-radius: 5px;
+  background: $primary-blue;
+  color: $white;
+  -webkit-appearance: none;
+  padding: 2px 8px;
+  margin: 4px;
+  text-decoration: none;
+  font-size: $small-font-size;
+}
