@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sample component renders without errors 1`] = `
+<div>
+  <p
+    className="root"
+  >
+    Hello from component
+  </p>
+  <button
+    onClick={undefined}
+    type="button"
+  >
+    Click here
+  </button>
+</div>
+`;
